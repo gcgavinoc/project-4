@@ -1,108 +1,153 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships
+Welcome! My name is Gavin O'Connor and this is my Full Stack toolkit project. In this project, the goal was to create a live site that allows users to create posts based on the latest Video Games and Video Game related news stories and topics of discussion. Those posts would involve a title, header image, author and publishing date, and would be visible to all users who accessed the site. The posts could then be 'liked' and commented on by other users who viewed them. The comments would appear in order from oldest to newest and the number of likes a post received would be visible to all users of the site. Gaming is a passion of mine and I always strive to stay up to date with the latest gaming news, and so I chose to create this site based on that passion, as it would allow me to have a space I could share with other gamers to come together as a community.
 
-Welcome gcgavinoc,
+You can access the live site [here](https://ci-project-3-gavin.herokuapp.com/).
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Image of site using Am I Responsive tool](assets/images/amiresponsive.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Table of Contents
+[User Experience (UX) Design](#user-experience-ux-design)
+ - [User Goals](#user-goals)
+ - [User Expectations](#user-expectations)
+ - [Game Logic](#game-logic)
 
-## Gitpod Reminders
+[Features](#features)
+ - [Home page](#home-page)
+ - [Post Page](#post-page)
+ - [Like button](#like-button)
+ - [Comment section](#comment-section)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[Testing](#testing)
+ - [Manual testing](#manual-testing)
 
-`python3 -m http.server`
+[Technologies used](#technologies-used)
 
-A blue button should appear to click: _Make Public_,
+[Deployment](#deployment)
 
-Another blue button should appear to click: _Open Browser_.
+[Project Screenshots](#project-screenshots)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Acknowledgements](#acknowledgements)
 
-A blue button should appear to click: _Make Public_,
+# User Experience (UX) Design
+[Go to top](#table-of-contents)
 
-Another blue button should appear to click: _Open Browser_.
+## User Goals
+[Go to top](#table-of-contents)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The user goals for this project are the following:
+ - To allow users to create posts with a title and text content as well as a header image for the post.
+ - To allow users to comment on posts and to allow all users to see those comments under the post.
+ - To allow users to 'like' a post to show that they agree with or appreciate the contents in the post, and to have the total number of likes appear under the post to show users at a glance which posts are favored by users over others
+ - To allow users to view all posts being created for the site and to allow them to peruse the different posts for themselves to read their text content and learn about various news stories or topics of discussion.
 
-To log into the Heroku toolbelt CLI:
+## User Expectations
+[Go to top](#table-of-contents)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The user expectations I expect when engaging with this site are the following:
+ - The design should be intuitive enough for the user to be able to create a post for themselves without the need for rules screens or instructions.
+ - The user should expect to be able to comment on a post.
+ - The user should expect to be able to like posts.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Site Skeleton
+[Go to top](#table-of-contents)
 
-------
+I created a site skeleton before starting development on the site itself, which allowed me to visualize what elements and features needed to be implemented as well as to set a scope for my site that needed to be met. The site skeleton was created using [UIZard](https://uizard.io/). The site skeleton can be seen below:
 
-## Release History
+![Image of the site skeleton for the home page of the site](static/images/uizard-home.png)
+![Image of the site skeleton for the post page of the site](static/images/uizard-post.png)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Features
+[Go to top](#table-of-contents)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Home page
+[Go to top](#table-of-contents)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Upon loading the site, the user will be greeted with a screen that shows three buttons at the top of the screen. These three buttons will be as follows. The first is home, to return the user to the home screen where the site first loaded. The second is to create a post. The third is to login if the user has an existing account and the fourth is to register for an account.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Under that, the user will see the title of the Gaming news site. Then the posts will appear under that, with each post appearing in it's own square space, and the posts appearing on top of and next to each other in a grid formation. The posts will show the posts image as a background with the post title, author, date, and number of likes and comments overlayed onto the image. The user can click on the post they want to view to open it.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+At the bottom of the screen, the user will see various links to social media sites for the gaming news site such as to Facebook, LinkedIn, and Twitter.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Image of the home screen](assets/images/features-welcome.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Post page
+[Go to top](#table-of-contents)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+When the user clicks on a post, they will be brought to the page for that post. Here they will see the title of the post, as well as the name of the author, date it was posted and the number of likes and comments. Below this there will be the image being used for the post, and below that will be the text content for the post. The comments will then appear under the text content if the user scrolls down to the bottom of the text content, as well as a box for the user to enter their own comment.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Image of the posts page for the site](assets/images/features-rules.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Like button
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+If the user wishes, they can click on the like button associated with each post. This will increase the number on the like counter for that particular post by 1. The user can also click the like button again to 'unlike' the post, if they wish to remove their like later or if they clicked it accidentally.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Image of the like button for the posts on the site](assets/images/features-rules.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Comment section
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Under the text content of each post will be the section for comments. There will be a text field that the user can enter their comment into and the click a submit button to have their comment appear on the post. The comments will be displayed from oldest at the top to newest at the bottom, so that other users visiting the site can see the comments in order as they were made on the post, with each comment being influenced by the ones made above it, simulating a conversation.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Image of the comment section for the posts on the site](assets/images/features-rules.png)
 
-------
+# Testing
+[Go to top](#table-of-contents)
 
-## FAQ about the uptime script
+## Manual Testing
+[Go to top](#table-of-contents)
 
-**Why have you added this script?**
+I manually tested the site by creating posts, and then also creating comments on those posts and liking/unliking the posts as well. The post appeared correctly on the home page in a grid formation with title, author, post date and image appearing as normal. The home button also worked correctly by bringing me back to the home screen. The register button allowed me to create a new user profile and the login button allowed me to sign in as a created user succesfully. The comment field allowed me to create a post a new comment on those posts and the like button increase the like counter on each post by 1 when clicked and reduced the counter by 1 when clicked again.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+# Technologies used
+[Go to top](#table-of-contents)
 
-**How will this affect me?**
+ - [Github](https://github.com/) was used to create the repository that hosts the site and to store the project's code after it was pushed from Git.
+ - [Gitpod](https://gitpod.io/workspaces) was used as the Code Editor used for the site.
+ - [Heroku](https://www.heroku.com) was used to host the site code as an app.
+ - [Am I Responsive](https://ui.dev/amiresponsive) was used to display what the game looks like on various screen sizes
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+# Deployment
+[Go to top](#table-of-contents)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+This project was deployed to Heroku from Github, Heroku was used to host the site as an app.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+These are the deployment steps:
 
-**So….?**
+1. Push all code to Github
+2. Go to [Heroku](https://www.heroku.com)
+3. Click button labeled 'Sign up for free'
+4. Enter details, click 'Create free account'
+5. Click link in verification email sent to entered email address
+6. Create new password, click 'Set password and Login'
+7. Accept terms of service
+8. Click 'Create new app'
+9. Enter app name and select Europe as the region, click create app
+10. Click settings tab, click 'Reveal Config Vars'
+11. Enter key as PORT and value as 8000
+12. Enter key as SECRET_KEY and value as chosen password
+13. Enter key as HEROKU_POSTGRESQL_ORANGE_URL and value as postgres://wljjdmxfqtlxqb:8bc8d113d931b9f4f092c2153b9d418b49f6f259583e32be2b347546621786cc@ec2-54-228-32-29.eu-west-1.compute.amazonaws.com:5432/d9o84q8bicjpqu
+14. Enter key as DISABLE_COLLECTSTATIC and value as 1
+15. Enter key as DATABASE_URL and value as postgres://vhdjiaeu:G0NFgUewu3VsNBQnxXfjv_c7YqXXmtCh@kandula.db.elephantsql.com/vhdjiaeu
+16. Enter key as CLOUDINARY_URL and value as cloudinary://274126749241213:-Cam-CM8CS3DkASjY2YAYcJzuqE@dmsbtzyq3
+17. Click 'Deploy' tab, click 'Connect to Github'
+18. Click 'Connect to Github', sign in to Github in window that appears
+19. Search repository name in search bar 'project-4'
+20. Click repository 'project-4' that appears, click 'Connect'
+21. Scroll down, under 'Choose a branch to deploy' ensure 'main' is selected
+22. Click 'Deploy Branch', then 'View' when deployment is complete
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+# Project screenshots
+[Go to top](#table-of-contents)
 
-**Can I opt out?**
+Home page
+![Image of the sites home page](assets/images/gitpod-problems-fixed.png)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Posts page
+![Image of the sites posts page](assets/images/gitpod-problems-fixed.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+# Acknowledgements
+[Go to top](#table-of-contents)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+ - This site is based on the code created from the Code Institute walkthrough project entitled "I think therefore I Blog"
+ - Wireframes were created via UIZard free wireframes builder tools
+ - Many thanks to my mentor Marcel for his help and guidance
