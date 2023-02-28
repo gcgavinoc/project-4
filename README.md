@@ -1,4 +1,4 @@
-# Battleships
+# Gaming News Site
 Welcome! My name is Gavin O'Connor and this is my Full Stack toolkit project. In this project, the goal was to create a live site that allows users to create posts based on the latest Video Games and Video Game related news stories and topics of discussion. Those posts would involve a title, header image, author and publishing date, and would be visible to all users who accessed the site. The posts could then be 'liked' and commented on by other users who viewed them. The comments would appear in order from oldest to newest and the number of likes a post received would be visible to all users of the site. Gaming is a passion of mine and I always strive to stay up to date with the latest gaming news, and so I chose to create this site based on that passion, as it would allow me to have a space I could share with other gamers to come together as a community.
 
 You can access the live site [here](https://ci-project-3-gavin.herokuapp.com/).
@@ -68,26 +68,26 @@ Under that, the user will see the title of the Gaming news site. Then the posts 
 
 At the bottom of the screen, the user will see various links to social media sites for the gaming news site such as to Facebook, LinkedIn, and Twitter.
 
-![Image of the home screen](assets/images/features-welcome.png)
+![Image of the home screen](static/images/home-screen.png)
 
 ## Post page
 [Go to top](#table-of-contents)
 
 When the user clicks on a post, they will be brought to the page for that post. Here they will see the title of the post, as well as the name of the author, date it was posted and the number of likes and comments. Below this there will be the image being used for the post, and below that will be the text content for the post. The comments will then appear under the text content if the user scrolls down to the bottom of the text content, as well as a box for the user to enter their own comment.
 
-![Image of the posts page for the site](assets/images/features-rules.png)
+![Image of the posts page for the site](static/images/post-screen.png)
 
 ## Like button
 
 If the user wishes, they can click on the like button associated with each post. This will increase the number on the like counter for that particular post by 1. The user can also click the like button again to 'unlike' the post, if they wish to remove their like later or if they clicked it accidentally.
 
-![Image of the like button for the posts on the site](assets/images/features-rules.png)
+![Image of the like button for the posts on the site](static/images/like-button.png)
 
 ## Comment section
 
 Under the text content of each post will be the section for comments. There will be a text field that the user can enter their comment into and the click a submit button to have their comment appear on the post. The comments will be displayed from oldest at the top to newest at the bottom, so that other users visiting the site can see the comments in order as they were made on the post, with each comment being influenced by the ones made above it, simulating a conversation.
 
-![Image of the comment section for the posts on the site](assets/images/features-rules.png)
+![Image of the comment section for the posts on the site](static/images/comment-section.png)
 
 # Testing
 [Go to top](#table-of-contents)
@@ -103,7 +103,6 @@ I manually tested the site by creating posts, and then also creating comments on
  - [Github](https://github.com/) was used to create the repository that hosts the site and to store the project's code after it was pushed from Git.
  - [Gitpod](https://gitpod.io/workspaces) was used as the Code Editor used for the site.
  - [Heroku](https://www.heroku.com) was used to host the site code as an app.
- - [Am I Responsive](https://ui.dev/amiresponsive) was used to display what the game looks like on various screen sizes
 
 # Deployment
 [Go to top](#table-of-contents)
@@ -139,11 +138,15 @@ These are the deployment steps:
 [Go to top](#table-of-contents)
 
 Home page
-![Image of the sites home page](assets/images/gitpod-problems-fixed.png)
+![Image of the sites home page](static/images/home-screen.png)
 
 Posts page
-![Image of the sites posts page](assets/images/gitpod-problems-fixed.png)
+![Image of the sites posts page](static/images/post-screen.png)
 
+# Project Issues
+[Go to top](#table-of-contents)
+
+I struggled greatly with being able to learn and comprehend Django and the intricacies of back-end development, which lead to me being unable to complete this project the way I had hoped. I have scheduled private tutoring sessions which I hope will help to bring me up to speed on this portion of the course, allowing me to return to this project and add all of the functionality I had envisioned.
 
 # Acknowledgements
 [Go to top](#table-of-contents)
